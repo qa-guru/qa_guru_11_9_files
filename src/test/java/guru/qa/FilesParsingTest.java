@@ -82,7 +82,7 @@ public class FilesParsingTest {
     @Test
     void jsonCommonTest() throws Exception {
         Gson gson = new Gson();
-        try (InputStream is = classLoader.getResourceAsStream("files/simple.json")) {
+        try (InputStream is = classLoader.getResourceAsStream("files/dima.json")) {
             String json = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
             assertThat(jsonObject.get("name").getAsString()).isEqualTo("Dmitrii");
@@ -93,7 +93,7 @@ public class FilesParsingTest {
     @Test
     void jsonTypeTest() throws Exception {
         Gson gson = new Gson();
-        try (InputStream is = classLoader.getResourceAsStream("files/simple.json")) {
+        try (InputStream is = classLoader.getResourceAsStream("files/dima.json")) {
             String json = new String(is.readAllBytes(), StandardCharsets.UTF_8);
             Teacher jsonObject = gson.fromJson(json, Teacher.class);
             assertThat(jsonObject.name).isEqualTo("Dmitrii");

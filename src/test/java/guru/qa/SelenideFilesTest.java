@@ -2,6 +2,7 @@ package guru.qa;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import guru.qa.jupiter.BrowserExtension;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -11,6 +12,7 @@ import java.io.InputStream;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@BrowserExtension
 public class SelenideFilesTest {
 
     @Test

@@ -10,4 +10,9 @@ public class Teacher {
     @SerializedName("favorite_music")
     public List<String> favoriteMusic;
     public Address address;
+
+    @Override
+    public String toString() {
+        return "Имя: " + name;
+    }
 }
